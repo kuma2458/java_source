@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오버튼 디자인</title>
+    <style>
+
+       input{
+        display: none;
+       }
+       .radio{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        padding: 2px;
+        border-radius: 8px;
+        border: 2px solid orangered;
+        background-clip: content-box;
+        box-sizing: border-box;
+        position: relative;
+        top: 2px;
+        left: -2px;
+       }
+       input:checked+label>.radio{
+        background-color: orange;
+       }
+       label{
+        display: inline-block;
+        width: 120px;
+       }
+
+        
+    </style>
+</head>
+<body>
+    <input type="radio" name="items" id="chk1" checked><label for="chk1"><span class="radio"></span>항목1</label>
+    <input type="radio" name="items" id="chk2"><label for="chk2"><span class="radio"></span>항목2</label>
+    <input type="radio" name="items" id="chk3"><label for="chk3"><span class="radio"></span>항목3</label>
+    <input type="radio" name="items" id="chk4"><label for="chk4"><span class="radio"></span>항목4</label>
+    <input type="radio" name="items" id="chk5"><label for="chk5"><span class="radio"></span>항목5</label>
+</body>
+</html>
