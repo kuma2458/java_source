@@ -1,0 +1,126 @@
+-----html
+
+<html lang="ko">  : 언어 설정
+
+<head>
+    <meta charset="UTF-8">  : 언어 셋 설정
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> content : 창크기. initial-scale : 배율
+    <title>Document</title>  title : 페이지 탭 이름
+</head>
+
+h1~h6 : 제목 크기 태그
+hr : 구분선
+br : 줄바꿈
+p :블럭
+b , strong : 볼드처리
+i , em : 기울이기
+u , ins  : 밑줄
+&nbsp; : 스페이스바
+&copy; : 카피라이트 문구 
+ul : 순번 없는 목록 블록
+ol : 순번이 있는 목록 블록
+    ㄴ start : 시작번호 지정
+    ㄴ reversed : 역순으로가게 함
+    ㄴ type : 항목 번호를 다른거로 바꿀수잇음
+li : ul이나 ol속 목록 항목들
+
+이미지 파일
+종류 : jpg, gif, png, bmp, svg,webp
+비트맵 : 포토샵, 그림판,
+벡터 : 어도비 일러스트레이터\
+
+-----
+비디오 video
+video : 비디오파일
+
+controsl : 재생버튼 활성화
+autoplay : 자동재생
+loop : 반복재생
+poster : 썸네일
+
+-----
+오디오 audio
+controsl : 재생버튼 활성화
+autoplay : 자동재생
+loop : 반복재생
+
+
+------
+하이퍼링크
+<a href:"">
+
+a  : 하이퍼링크
+    ㄴhref : 이동할 링크 주소
+    ㄴtarget : 해당 페이지를 여는 방법
+        ㄴ _self : 현재 탭에서 열기
+        ㄴ _blank : 새로운 탭에서 열기
+    ㄴtitle : 이동할 링크의 툴팁제목
+    ㄴdownload : 해당 링크 누르면 다운로드 됨
+
+----------
+p - id 
+:해당 문단의 이름을 지정해줌
+-----
+모바일or pc에서 기능실행
+
+tel, sms, mailto + ':' : 전화,sms,메일 보낼수잇음
+
+----------
+table : 테이블 영역
+tr : 테이블 행 영역
+td : 테이블 열 영역
+colspan : 해당 셀 열방향으로 확장
+rowspan : 해당 셀 행방향으로 확장
+th : 테이블 제목(헤드) 영역
+tbody : 테이블 본문 영역
+tfoot : 테이블 꼬리말영역
+caption : 테이블의 제목, 테이블 제목표
+
+prograss : 로딩바
+
+dl : 데이터 사전
+dt : 데이터 칸
+dd : 데이터에 대한 설명칸
+
+figure : 사진첩
+figcaption : 사진첩 제목
+
+blockquote  : 인용구 쓰는 블록
+
+cite : 인용한 사이트, 인용구 쓰는 칸 
+mark : 형광펜 색칠한느낌
+footer : 꼬릿말
+
+-------------
+11월 24일
+
+form : 로그인칸 같이 무언갈 입력받거나 출력하는 틀
+    ㄴmethod : 데이터를 어떻게 전송할지 정하는 태그
+        ㄴpost : http나 https의 body에 포함되어 데이터 전송
+        ㄴget : url이랑 입력하거나 출력한 데이터를 합쳐서 한번에 보냄
+            이때는 url에 데이터가 보여짐
+input : 입력받는 칸
+    ㄴname : input의 이름
+    ㄴtype : 입력받는 데이터 종류, text, password, submit 등 있다
+    ㄴplaceholder : 입력 전 미리표시되는 텍스트를 넣는 태그 
+    ㄴrequired : 반드시 입력하게 하는 태그
+    ㄴreadonly : 읽기만되는것, 수정x, 다만 서버로 전송은됨
+    ㄴdisabled : 수정x, 서버로 전송x
+    ㄴautofocus : 새로고침시 자동으로 커서가 가는거
+    ㄴlabel : 텍스트에 라벨을 붙이듯 누르면 for이 가리키는걸 선택해줌
+    ㄴchecked : 기본적으로 선택되게 해주는 값
+    ㄴminlength :최소입력길이
+    ㄴmaxlength :최대입력길이
+    ㄴlist : datalist 가리키는 태그
+button : 버튼
+textarea : 글쓰는 칸 
+checkbox 
+datalist : 데이터 목록셋
+ㄴid :데이터리스트 고유값
+radio
+select
+
+
+
+
+

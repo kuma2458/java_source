@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .flex_container{
+            width: 1200px;
+            margin: 100px auto;
+            border: 1px solid black;
+        }
+        .box{
+            margin: 5px;
+            width: 100px;
+            padding: 5px 0px;
+            background-color: burlywood;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .flex_row{
+            display: flex;
+            flex-direction: row;
+        }
+        .flex_row_reverse{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .flex_column{
+            display: flex;
+            flex-direction: column;
+        }
+        .flex_column_reverse{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex_container">
+        <div class="flex_row">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+        <div class="flex_row_reverse">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+        <div class="flex_column">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+        <div class="flex_column_reverse">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+    </div>
+</body>
+</html>

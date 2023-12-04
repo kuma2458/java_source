@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        /* 
+            div에 가로세로 48px
+            배경이미지를 icon.png 지정,
+            배경이미지는 반복이 되지 않게끔 처리
+            검은색 테두리
+        */
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+        }
+        div{
+            width: 48px;
+            height: 48px;
+            /* border: 2px solid black; */
+        }
+        .left_arrow{
+            background-image: url('/step09/resource/icon.png');
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+        .right_arrow{
+            background-image: url('/step09/resource/icon.png');
+            background-repeat: no-repeat;
+            background-position: -48px 0px;
+        }
+        .profile{
+            background-image: url('/step09/resource/icon.png');
+            background-repeat: no-repeat;
+            background-position: -96px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left_arrow"></div>
+    <div class="right_arrow"></div>
+    <div class="profile"></div>
+</body>
+</html>

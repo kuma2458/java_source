@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_sementic_tag</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 1200px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 0px auto;
+            background-color: #eeeeee;
+            text-align: center;
+        }
+        nav{
+            width: 1200px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 0 auto;
+            background-color: darkcyan;
+        }
+        .container{
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            font-size: 0px;
+            padding: 0;
+            text-align: center;
+
+        }
+        section{
+            font-size: 16px;
+            float: left;
+            width: 800px;
+            height: 300px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            background-color: chocolate;
+
+        }
+        aside{
+            font-size: 16px;
+            float: left;
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            background-color: darkorchid;
+
+        }
+        footer{
+            clear: both;
+            width: 1200px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<!-- 레이아웃 나누는 태그들
+    1.header : 웹페이지에서 윗부분, 머리글, 제목영역 담당
+    2.nav : 메뉴 영역, 하이퍼링크 모음
+    3.section : 웹페이지 주요 콘텐츠 영역
+    4.aside : 양옆사이드 쪽에 나오는 광고 영역 
+
+-->
+<body>
+    <header>웹페이지에서 일반적으로 제일 윗부분,머리글, 제목영역</header>
+    <nav>메뉴 영역, 하이퍼링크 모음</nav>
+    <div class="container">
+        <section>
+            웹페이지에서 주요 콘텐츠 영역
+        </section><aside>
+            본문 외적인 내용, 광고, 배너 영역, section과 상관 없는 내용
+        </aside>
+    </div>
+
+    <footer>
+        웹페이지에서 일반적으로 제일 아랫부분
+        바닥글, 작성자, 저작권, 연락처, 사업자번호, 고객센터번호...
+    </footer>
+</body>
+</html>
