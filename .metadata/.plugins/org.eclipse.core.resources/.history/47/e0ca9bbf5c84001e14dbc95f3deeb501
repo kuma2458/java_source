@@ -1,0 +1,1 @@
+select s.st_no,s.st_name,m.major_name,s.st_score from student s join major m on s.major_no=m.major_no where s.st_no is'20100001';

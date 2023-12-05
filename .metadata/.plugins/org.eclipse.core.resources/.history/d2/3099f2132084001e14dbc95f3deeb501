@@ -1,0 +1,16 @@
+package jdbc;
+
+public class JDBCTest2 {
+
+	public static void main(String[] args) {
+		//car 테이블에서 상품 금액이 5000이상인 데이터를 조회해서 출력
+		try {
+			Class.forName("oracle.jdbc.driver.Oracledriver");
+			
+		} catch (ClassNotFoundException e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

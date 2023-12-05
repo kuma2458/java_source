@@ -1,0 +1,25 @@
+package jdbc;
+
+import java.sql.*;
+import java.util.Scanner;
+
+public class JDBCTest4 {
+
+	public static void main(String[] args) {
+		//학생정보 1건을 삽입하는 JDBC 작성
+		//학생 정보를 직접 입력 받은 값으로 삽입
+		try (Scanner sc =new Scanner(System.in)){
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			System.out.println("Driver 접속");
+			Connection conn= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","kimdonghyun","7587");
+			System.out.println("DB 접속");
+			System.out.print();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

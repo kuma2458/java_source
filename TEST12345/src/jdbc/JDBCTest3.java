@@ -1,0 +1,31 @@
+package jdbc;
+
+import java.sql.*;
+
+public class JDBCTest3 {
+
+	public static void main(String[] args) {
+		//학생정보 1건 삽입하는 JDBC 작성
+		//SQL문 작성하는 것까지 작업
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			System.out.println("Driver 연결");
+			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","kimdonghyun","7587");
+			System.out.println("DB 접속");
+			String sql = "INSERT INTO STUDENT VALUES('20112322','김동현',4.2,6)";
+			Statement stmt= conn.createStatement(); 
+			int count = stmt.executeUpdate(sql);
+			System.out.println(count);
+			stmt.close();
+			conn.close();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

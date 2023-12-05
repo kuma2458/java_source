@@ -1,0 +1,2 @@
+INSERT INTO STUDENT VALUES ('20112222','김동현',4.2,5);
+select * from STUDENT ;

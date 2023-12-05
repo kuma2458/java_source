@@ -1,0 +1,1 @@
+select major_no ||' - ' || major_name from major m;

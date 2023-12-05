@@ -1,0 +1,1 @@
+select * from CAR where	car_price>= 5000;

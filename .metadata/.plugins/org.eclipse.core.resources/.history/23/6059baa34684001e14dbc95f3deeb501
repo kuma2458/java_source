@@ -1,0 +1,30 @@
+package vo;
+
+import java.util.Objects;
+
+public class StudentVO {
+	// 학번, 이름, 학과명, 평점
+	private String stNo;
+	private String stName;
+	private String major_name;
+	private int major_no;
+	private double score;
+	
+	public StudentVO(String stNo, String stName, int major_no, double score) {
+		super();
+		this.stNo = stNo;
+		this.stName = stName;
+		this.major_no = major_no;
+		this.score = score;
+	}
+
+	public StudentVO(String stNo, String stName, String major_name, double score) {
+		super();
+		this.stNo = stNo;
+		this.stName = stName;
+		this.major_name = major_name;
+		this.score = score;
+	}
+
+
+}

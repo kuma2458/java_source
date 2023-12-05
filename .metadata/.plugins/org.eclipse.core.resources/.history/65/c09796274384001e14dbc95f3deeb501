@@ -1,0 +1,30 @@
+package service;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import vo.StudentVO;
+
+public class StudentService1 {
+	private static StudentService instance = new StudentService();
+
+
+	private StudentService() {
+
+	}
+	
+	public static StudentService getInstance() {
+		if (instance == null)
+			instance = new StudentService();
+		return instance;
+	}
+}

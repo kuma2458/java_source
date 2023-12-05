@@ -1,0 +1,14 @@
+package vo;
+
+import java.util.Objects;
+
+public class StudentVO {
+	// 학번, 이름, 학과명, 평점
+	private String stNo;
+	private String stName;
+	private String major_name;
+	private int major_no;
+	private double score;
+
+	
+}

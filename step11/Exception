@@ -1,0 +1,11 @@
+Exception
+	=런타임에러
+	프로그램이 실행중에 발생되는 에러는 아무런 처리도 없이 강제종료가 됨
+	프로그램을 강제로 종료가 되지 않게끔 처리하기 위해
+	Exception을 이용해서 중간에 에러가 발생한 것을 잡아서 처리하고, 코드를 계속 이어서 작업하게끔 하는 처리방법
+	
+try : 작업 영역, 대신에 이 영역에서는 Exception이 발생할 수 있다.
+catch : try영역에서 Exception이 발생할 시 Exception을 처리하는 방식 
+finally : Exception이 발생 하든 하지 않든 무조건 실행되는 영역
+throw : 원하는 부분에서 Exception을 강제로 발생시킴
+throws : 발생한 Exception을 외부로 던지는 행위(메서드를 호출한 대상에게 Exception을 전달)

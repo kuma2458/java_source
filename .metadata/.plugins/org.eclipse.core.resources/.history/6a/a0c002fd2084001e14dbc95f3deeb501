@@ -1,0 +1,38 @@
+package jdbc;
+
+import java.sql.*;
+
+public class JDBCTest2 {
+
+	public static void main(String[] args) {
+		//car 테이블에서 상품 금액이 5000이상인 데이터를 조회해서 출력
+		try {
+			//1.driver 연결
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			System.out.println("드라이버 연결완료");
+			//2.db연결
+			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","kimdonghyun","7587");
+			System.out.println("DB접속 완료");
+			//3.sql문 작성
+			String sql = "select * from CAR where CAR_PRICE >= 5000";
+			//4. statement 작성
+			Statement stmt = conn.createStatement();
+			//5. sql문 넣어서 실행 한결과 저장
+			ResultSet rs= stmt.executeQuery(sql);
+			//6. 출력
+			while(rs.next()) {
+				System.out.println(rs.getString(1)+" "+rs.getString(2)+""+rs.getInt("CAR_MAKE_YEAR")+
+						" "+rs.getInt("CAR_PRICE")+" "+rs.getString("CAR_MAKER_CODE"));
+			}
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

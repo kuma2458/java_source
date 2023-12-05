@@ -1,0 +1,12 @@
+package config;
+
+public class DBManager implements DBConFig{
+
+	private static DBManager instance = new DBManager();
+		
+	private DBManager() {
+	}
+
+	
+
+}

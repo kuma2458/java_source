@@ -1,0 +1,17 @@
+package jdbc;
+
+public class JDBCTest4 {
+
+	public static void main(String[] args) {
+		//학생정보 1건을 삽입하는 JDBC 작성
+		//학생 정보를 직접 입력 받은 값으로 삽입
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			System.out.println("Driver 접속");
+		} catch (ClassNotFoundException e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

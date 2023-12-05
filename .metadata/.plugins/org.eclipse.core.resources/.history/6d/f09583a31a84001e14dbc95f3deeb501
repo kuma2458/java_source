@@ -1,0 +1,19 @@
+package jdbc;
+
+import java.sql.DriverManager;
+
+public class JDBCTEST1 {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver"); 
+		}	
+		catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		//1. 드라이버 로드
+
+		
+		
+	}
+}

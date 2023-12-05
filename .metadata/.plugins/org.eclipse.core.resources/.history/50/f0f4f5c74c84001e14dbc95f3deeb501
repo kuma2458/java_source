@@ -1,0 +1,26 @@
+package controller;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import service.StudentService;
+import vo.StudentVO;
+
+public class PrintStudentController implements Controller {
+
+	@Override
+	public void execute(Scanner sc) {
+		System.out.println("학생정보 출력...");
+		ArrayList<StudentVO> list=StudentService.getInstance().getDBlist();
+		
+		if(list.isEmpty()) {
+			System.out.println("등록된 정보가 없습니다.");
+			return;
+		}
+		for(int i = 0 ; i<list.size(); i++) {
+			System.out.println(String.format("%s %s %s %2f", list.get(i).getStNo(),list.get(i).getStName(),
+					list.get(i).getMajor_name(),list.get(i).getScore()));
+		}
+	}
+
+}

@@ -1,0 +1,1 @@
+SELECT * FROM (SELECT RANK( ) OVER(ORDER BY S.ST_SCORE DESC)AS RANKING,s.st_no,s.st_name,m.major_name,s.st_score FROM STUDENT s join MAJOR m on s.major_no =m.major_no)  WHERE RANKING <=10

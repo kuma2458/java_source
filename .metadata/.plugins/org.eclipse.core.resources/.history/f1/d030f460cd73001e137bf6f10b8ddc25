@@ -1,0 +1,32 @@
+package calender;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class D_day {
+
+	public static void main(String[] args) {
+		//오늘 날짜 기준으로 수능까지 몇일 남았는지 출력
+		//gettime이용, 밀리초(1000이면 1초)
+		//case1. calendar사용
+		
+		Calendar c1=Calendar.getInstance();
+		Calendar c2=Calendar.getInstance();
+		c1.set(2023, 10, 16);
+		int d_day=(int)(c1.getTime().getTime()-c2.getTime().getTime())/(1000*60*60*24);
+		System.out.println(d_day);
+		
+		//case2. date 사용
+		Date date1=new Date(123, 11, 16);
+		Date date2=new Date();
+		System.out.println(date1.getTime());
+		System.out.println(date2.getTime());
+		int dday=(int)(date1.getTime()-date2.getTime())/(1000*60*60);
+		System.out.println(dday);
+		
+		
+	
+	
+	}
+
+}

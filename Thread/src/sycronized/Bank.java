@@ -1,0 +1,23 @@
+package sycronized;
+
+public class Bank {
+
+	private static Bank instance = new Bank();
+	private int money;
+
+	public Bank() {
+		money = 1000;
+	}
+
+	public static Bank getIndstance() {
+		if (instance == null)
+			instance = new Bank();
+		return instance;
+	}
+
+	public synchronized int withdraw(int a) {
+		money -= a;
+		return money;
+	}
+
+}

@@ -1,0 +1,1 @@
+select distinct(m.major_name) from student s join major m on s.major_no=m.major_no;

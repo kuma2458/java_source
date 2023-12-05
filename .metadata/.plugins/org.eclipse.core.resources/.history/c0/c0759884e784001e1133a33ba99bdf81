@@ -1,0 +1,70 @@
+package service;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import DAO.StudentDAO;
+import vo.StudentVO;
+
+public class StudentService {
+	private static StudentService instance = new StudentService();
+
+
+	private StudentService() {
+
+	}
+	
+	public static StudentService getInstance() {
+		if (instance == null)
+			instance = new StudentService();
+		return instance;
+	}
+
+	public boolean insertStudent(StudentVO studentVO) {
+		int result =StudentDAO.getInstance().insertStudent(studentVO);
+		return result==1;
+	}
+
+	public ArrayList<StudentVO> getDBlist() {
+		return StudentDAO.getInstance().getDBList();
+	}
+
+	public StudentVO searchstudent(String stNo) {
+		return StudentDAO.getInstance().searchstudent(stNo);
+	}
+
+	public ArrayList<StudentVO> searchname(String stName) {
+		return StudentDAO.getInstance().searchname(stName);
+	}
+
+	public int editStudentVo(StudentVO vo) {
+		return StudentDAO.getInstance().editStudentVo(vo);
+	}
+
+	public boolean deletestudent(String stNo) {
+		return StudentDAO.getInstance().deletestudent(stNo)==1;
+	}
+
+	public ArrayList<StudentVO> firstrank() {
+		return StudentDAO.getInstance().firstrank();
+	}
+
+	public ArrayList<Integer> ranklist() {
+		return StudentDAO.getInstance().ranklist();
+	}
+
+	public HashMap<String, StudentVO> firstrankmap() {
+		return StudentDAO.getInstance().firstrankmap();
+	}
+}

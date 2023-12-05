@@ -1,0 +1,28 @@
+package controller;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import service.StudentService;
+import vo.StudentVO;
+
+public class SearchStudentNameController implements Controller {
+
+	@Override
+	public void execute(Scanner sc) {
+		System.out.println("학생 이름 검색...");
+		System.out.print("검색하고 싶은 학생의 이름을 입력하세요 : ");
+		String stName=sc.nextLine();
+//		StudentService1.getInstance().searchname(stName);
+		ArrayList<StudentVO> list=StudentService.getInstance().searchname(stName);
+		if(list.isEmpty()) {
+			System.out.println("검색하신 이름을 가진 학생이 없습니다");
+			return;
+		}
+		for(int i = 0 ; i<list.size(); i++) {
+			System.out.println(String.format("%s %s %s %.2f", list.get(i).getStNo(),list.get(i).getStName(),
+					list.get(i).getMajor_name(),list.get(i).getScore()));
+		}
+	}
+
+}

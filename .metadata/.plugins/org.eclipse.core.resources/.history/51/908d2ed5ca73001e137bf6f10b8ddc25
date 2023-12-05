@@ -1,0 +1,13 @@
+package calender;
+
+public class D_day {
+
+	public static void main(String[] args) {
+		//오늘 날짜 기준으로 수능까지 몇일 남았는지 출력
+		//gettime이용, 밀리초(1000이면 1초)
+		
+	
+	
+	}
+
+}
