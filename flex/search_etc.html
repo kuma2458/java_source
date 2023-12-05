@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .search_bar{
+            width: 1000px;
+            height: 64px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        select{
+            width: 90px;
+            height: 65px;
+            font-size: 20px;
+            padding-left: 5px;
+        }
+        #search_bar{
+            width: 100%;
+            height: 64px;
+            border: none;
+            font-size: 20px;
+        }
+
+        button{
+            border: none;
+            height: 65px;
+            background-color: white;
+            padding: 0px 30px;
+            font-size: 20px;
+
+        }
+        input:checked{
+            border: none;
+            outline-style: none;
+            font-size: 32px;
+        }
+        input:focus{
+            border: none;
+            outline-style: none;
+            font-size: 32px;
+        }
+        .input_bar{
+            width: 500px;
+            display: flex;
+            flex-flow: row nowrap;
+            border: 1px solid black;
+            box-sizing: border-box;
+
+
+        }
+        .icon_zoom{
+            display: inline-block;
+            box-sizing: border-box;
+            width: 64px;
+            height: 64px;
+            margin: 0px 5px;
+            background-image: url('zoom.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 0px 5px;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="search_bar">
+        <select name="search_type" id="search_type">
+            <datalist id="search_type">
+                <option value="제목">제목</option>
+                <option value="아이디">아이디</option>
+                <option value="내용">내용</option>
+            </datalist>
+        </select>
+        <div class="input_bar">
+            <span class="icon_zoom"></span>
+            <input type="text" name="search_bar" id="search_bar" checked>
+        </div>
+        <button>검색</button>
+    </div>
+</body>
+</html>
