@@ -1,0 +1,279 @@
+CSS(Cascading Style Sheet)
+    html 문서에서 디자인 부분을 담당한다.
+
+    선택자(seleter) : 디자인을 적용할 태그를 선택하는 방법
+    
+    글꼴
+    박스모델링
+    레이아웃
+    애니메이션
+    미디어쿼리
+    반응형 웹
+
+
+    ---------------
+css
+
+css에서 select하는방법
+1.태그 -> tag이름{}
+2.클래스 -> .클래스이름{}
+3.아이디 -> #아이디이름{}
+4.모든항목에 적용 -> *{}
+
+최우선도는 아이디>클래스>태그
+
+css font 속성들
+
+color : 색상
+font-decolation: color(색상), underline(밑줄), line-through(취소선), overline(글자위에선),
+    ㄴ선 종류 : solid = 직선 / dotted = 점선 / dashed = 실선 / wavy = 물결선 / double= 이중선
+
+margin : 여백 / px
+padding : 여백 / px
+border : 선 / px , 선 종류, 선색깔;
+border-collaspe : 선 사이 간격 없앨수있음 / collaspe
+
+font-weight : 볼드체 
+font-style : ex)italic
+font-family : 폰트설정, 
+ㄴ사용자가 해당폰트가 없어도 가능하게 하는법
+    @font_face {
+        font-family:
+        url:
+    }
+
+weight : 화면비율 기준 가로를 얼마만큼 차지할지 설정 
+text-align : 정렬하는 코드 
+    ㄴleft, right, center, justify
+
+글꼴 크기
+px : 기본단위, 절대단위
+rem,em : 부모요소의 글꼴크기를 기준으로 비율을 계산
+per(%) : 비율
+
+----------------
+list style
+
+ol(숫자) : decimal(기본), lower-roman(소문자 로마), upper-roman(대문자 로마),
+            lower-alpha(소문자 알파벳),upper-alpha(대문자 알파벳),cjk-decimal(한자),none
+ul(문양) : disc,circle,square,none
+
+------
+단어 관련
+word-break : 자동줄바꿈시 단어가 깨지는걸 방지하기 위한 설정
+    ㄴbreak-all : 기본값, 줄바꿈시 단어가 깨짐
+    ㄴkeep-all : 줄바꿈시 단어가 깨지지 않도록 함
+
+word-spacing : 단어 사이 간격 조정
+letter-spacing : 문자 사이 간격 조정
+white-space : box에 대해 문장을 어떻게 처리할지 정하는 옵션
+    ㄴpre-line : 연속 공백x br과 엔터도 줄바꿈으로 인식함, 가로 길이에 따라 줄바꿈 o
+    ㄴpre : 연속 공백o, br과 엔터도 줄바꿈, 가로 길이에 따라 줄바꿈 x 
+    원본 그대로 출력
+    ㄴpre-wrap : 연속 공백 o, 엔터와 br로 줄바꿈, 가로 길이에 따라 줄바꿈 o 들여쓰기?
+    ㄴbreak-spaces : pre-wrap이랑 비슷하긴한데 연속 공백이 줄 끝이상이 되면 줄바꿈
+    ㄴnowrap : 연속 공백 x 엔터 x br은 됨 가로길이 줄바꿈 x
+
+overflow : 화면이나 정해진 구역을 넘어갔을때 처리해주는 옵션
+    ㄴauto
+    ㄴhidden : 넘어가면 그냥 숨겨버림
+    ㄴscroll : 넘어가면 스크롤이 생김
+text-overflow : 텍스트전용 오버플로우, overflow 옵션이랑 같이 써야됨
+    ㄴclip : ... 없이 자르기
+    ㄴellipsis : ...으로 줄여줌
+
+
+-----------------
+block tag : hi, p, figure, hr, ul, li : 자동으로 줄바꿈
+inline tag : a, img, input, select, button : 줄바꿈 안됨, 글자처럼 취급, 내용으로 취급되는 애들
+
+html에서 영역을 잡는 태그 : div, span
+div : block 형태로 영역을 잡음
+span : inline 형태로 영역을 잡음
+
+div로 영역을 잡고 스타일을 적용할때는 span을 사용
+
+
+table
+table-layout : 테이블 크기를 지키도록하는 옵션
+ㄴfixed : 테이블 크기를 지키도록함
+
+margin/padding
+
+둘다 빈 영역, 간격을 넣어주는 옵션이지만
+margin은 border 바깥
+padding은 내부 영역과 border 사이의 간격
+
+margin/padding 채우는 방식
+1. margin/padding : 1px 
+ㄴ상하좌우 모두다 같은 값만큼 늘림
+2.margin/padding : 1px 2px
+ㄴ(상하) (좌우) 값을 넣어서 서로 다르게 늘림
+3.margin/padding : 1px 2px 3px
+ㄴ(상) (좌우) (하) 값을 넣어서 서로 다르게 늘림
+4.margin/padding : 1px 2px 3px 4px
+ㄴ(상) (우) (하) (좌) 시계방향순서로 늘림
+
+box-sizing 옵션
+    ㄴwidth로 길이를 잡을때 테두리르 포함한 길이로 할지 아니면 테두리를 제외할지 결장
+border-radius = 테두리 둥글게 하기
+
+background-color : 배경색
+background-position : 배경이미지 위치 잡는거
+ㄴleft,right,center,bottom,top 
+
+background-size : 배경이미지 크기
+    배경이미지 크기, 100 100이면 꽉채움
+    다만 이미지를 늘려서 맞춘거라 깨질수있음
+    auto를 쓰면 반대길이, 즉 가로에서 auto면 세로, 세로에서 auto면 가로 길이에 비율을맞춰줌 
+    cover : 가로 세로 비율중 작은것을 기준으로 꽉 채움, 벗어난 이미지는 자름
+    contaion : 가로세로 비율중 큰거에 맞춰서 크기를 키움. 얘는 이미지 안자르지만 꽉 채우지는 못함
+background-clip : 배경 채우는 영역
+ㄴborder-box : border 영역까지 채움. 단 배경 이미지는 border영역까지 안채움
+ㄴpadding-box : padding 영역까지 채움
+ㄴcontent-box : content 영역만 채움
+ 
+---------------------
+display 
+ㄴ해당 태그를 어떤걸로 보여줄지 정해주는 요소
+ㄴblock, inline, inline-block 등등이 있음
+ㄴinline-block : inline, block 취급을 동시에 받게 함
+
+display 에서 inline-block할때 간격 없애는법
+1.엔터지우기
+2.ul에서 font-size 0으로하고 자식 li에서 font-size 설정 
+3.float사용
+
+display든 block이든 중앙에 오게 하고싶을때 
+1.width 값 설정
+2.margin값을 0 auto로 준다
+
+
+
+floats
+box요소들을 한글파일에서 이미지마냥 text위에 띄우는 느낌 
+left, right 등이 있음
+
+float 단점
+float를 써버리면 한글파일 이미지처럼되버려서 문자로 인식x, 다른내용들이 위로 쫙 땡겨져서
+이를 방지하거나 float를 문자들과 같이 쓰고싶으면 float를 display: inline-block 선언한 container로 또 묶어줘야함
+
+clear 
+floats와 연관되는거로, float를 인식해서 다음줄로 보낼지 말지 해주는 옵션
+ㄴleft : 윗줄에서 float옵션이 left로 되어있으면 다음줄로 넘김. 만약 float가 right면 같은줄에 써짐
+ㄴright : 윗줄에서 float옵션이 right로 되어있으면 다음줄로 넘김. 만약 float가 left면 같은줄에 써짐
+ㄴboth : left,right 둘다 취급해서 그냥 다음줄로 보냄 
+
+position 
+좌표값
+position옵션
+1.static : 기본값, 안움직임
+2.relative : 원래 본인위치 좌표값 기준
+3.absolute : 부모 태그 좌표값 기준, 단 부모태그가 position이 있어야됨
+4.fixed : 브라우저화면을 기준으로 설정한 좌표값에 박아버림. 말그대로 fixed
+
+z-index 
+태그들의 맨위로올라오는 z좌표값 정하는 옵션
+보통은 코드작성한 순서대로 제일위로 올라오지만
+z-index를 사용해서 강제로 끌어올릴수있다.
+기본값은 0으로 지정되어있고, 숫자가 클수록 제일 맨 위로 올라옴
+
+----------------
+11월 30일
+
+영역을 나누는 태그가 html 5부터 나옴
+header 제목영역
+nav 메뉴,하이퍼링크 영역
+section 본문영역
+aside 양옆 사이드 영역, 광고 등
+footer 맨밑칸, 저작권, 회사정보 등
+
+--------------------
+
+12월 1일
+grid : 행과 열로 이루어진 2차원 레이아웃 시스템
+grid-template-columns : grid 열을 어떻게 영역을 잡을지 하는거
+ㄴrepeat(몇개반복할지,열 길이)
+ㄴauto-fill : 개수에 맞게 자동으로 넣긴하는데, 열넓이를 꽉채우게 늘리지않음
+ㄴauto-fit : 개수에 맞게 넣고, 열넓이를 꽉 채우게 늘림
+grid-template-rows : grid 행을 어떻게 영역잡을지
+ㄴminmax(min값,max값)
+grid-template-area : 어떤식으로 영역을 잡을지 직접 작성하는 코드
+ㄴex :   grid-template-areas: 
+            "box2 box1 box4"
+            "box2 box3 box3"
+            "box2 box3 box3"
+            "box5 box5 box5";
+    -이렇게 하고 box요소들에 해당 box1, box2등 stye을 넣어주면 저리로 영역을 잡음
+grid-row: 행번호
+grid-column: 열번호
+-그냥 숫자만 적으면 몇번째 열이 맞는데 ' / ' 슬래쉬가 들어가면 숫자가 라인번호가 되버림
+ㄴex) grid-column : 시작 열라인번호 / 끝나는 열라인번호
+    -단, 끝나는열번호가 시작열번호보다 작으면 끝나는열번호가 시작번호가 됨
+ㄴex) grid column : 1/ span2
+    - 1번째 라인부터 2칸먹기    
+ㄴspan = 몇칸을 먹을지
+
+flex : display 한종류
+
+flex-direction 
+1.row : 기본값, 왼쪽에서 오른쪽으로
+2.row-reverse : 오른쪽에서 왼쪽으로
+3.column : 위에서 아래로
+4.column-reverse : 아래에서 위로
+
+flex-wrap : flex 안 요소들을 어떻게 나열할지
+1.nowrap : 줄바꿈없이 한줄에 아득바득 넣기
+2.wrap : 원본 크기 유지하고 줄바꿈
+
+flex-flow : flex-wrap이랑 flex-direction을 한번에 작성하는 태그
+
+justify-content : box나 등등 content요소들 정렬시키는 태그?
+1.start, flex-start :왼쪽 끝으로 정렬
+2.center : 중앙정렬
+3.end, flex-end : 오른쪽 끝으로 정렬
+4.space-around : 전체적으로 균등하게 배분
+5.space-between : 얘도 전체적으로 균등하게 배분하는데 양끝 content가 공백없이 딱 붙여놓음
+
+justify 는 메인축임 
+align-~~ :  교차축
+1.align-item : 나한테 소속된 애들한테 부여, 얘는 한 줄만 취급, 양이많이서 다음줄로 넘어가면 개별 줄로 취급
+1.align-content : 나한테 소속된 애들한테 부여, content는 여러줄일때 씀
+2.align-self : 나 자신한테 부여
+
+---------------
+12월 4일 시작
+
+자식 / 자손 구분
+자식 : 내가 직접 감싸고 있는 태그를 가리킴
+자손 : 내 밑 자손이 감싸고 있는 태그를 가리킴
+
+자식선택자
+ㄴ선택자>선택자{}
+
+자손선택자
+ㄴ선택자 선택자{}
+
+형제선택자-바로 밑에 있는 동생 선택
+ㄴ선택자+선택자{}
+
+형제선택자-동생요소들 중 내가 선택하고싶은 요소들 선택
+ㄴ선택자~선택하고싶은 요소들{}
+
+가상클래스 : 내가 선택한 태그의 상태, 상황을 부여해서 그 상태/상황에 해당하는 애들에만 css적용
+ex) 선택자:부여할 상태/상황{}
+
+!important 
+: 해당 css설정을 무조건 쓰게 하는 코드. 단, 너무 많이쓰면안됨
+
+선택자::placeholder : 내부 요소, 워터마크등 에 대한 css
+
+선택자::after : 선택한 요소의 마지막에 내용추가하는 css
+ex)선택자::after{
+    content:"추가할 내용";
+}
+
+선택자::before : 선택한 요소 시작 전에 내용추가하는 css
+ex)선택자::before{
+    content:"추가할 내용";
+}

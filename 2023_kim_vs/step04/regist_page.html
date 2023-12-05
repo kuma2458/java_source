@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        *{
+          margin:0;
+          padding:0;
+        }
+        h1{
+          text-align : center;
+          margin:20px 0;
+        }
+        table{
+          border-collapse:collapse;
+          margin:0 auto;
+          border:none;
+        }
+        td{
+          padding: 10px;
+          font-size:18px;
+          border:none;
+        }
+        input{
+          width:300px;
+          font-size:18px;
+          padding : 5px 10px;
+        }
+        textarea{
+          width:100%;
+          padding: 10px;
+          height : 300px;
+          box-sizing : border-box;
+          resize:none;
+        }
+        button{
+          width:150px;
+          padding:10px 0px;
+        }
+        select{
+          font-size:18px;
+          padding : 5px 10px;
+        }
+        input[name*='tel']{
+          width:100px;
+          text-align:center;
+        }
+        input[type='checkbox'],input[type='radio']{
+          width:16px;
+          margin-left:20px;
+        }
+        </style>
+</head>
+<body>
+    <h1>회원가입 페이지</h1>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td>
+                   <label for="id">아이디</label>
+                </td>
+                <td>
+                    <input type="text" name="id" id="id"  placeholder="아이디를 입력하세요" required >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="passwd">암호</label>
+                </td>
+                <td>
+
+                    <input type="password" name="passwd" id="passwd" placeholder="암호를 입력하세요" required >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="passwdcheck">암호확인</label>
+                </td>
+                <td>
+                    <input type="password" name="passwdcheck" id="passwdcheck"  placeholder="암호를 다시 입력하세요" required >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">이름</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="name" placeholder="이름을 입력하세요" required
+                    >
+                </td>
+            </tr>
+            <tr>
+                <td>연락처</td>
+                <td>
+                    <select >
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                    </select>
+                    <input type="tel" name="tel1" id="tel1">
+                    <input type="tel" name="tel2" id="tel2">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">이메일</label>
+                </td>
+                <td>  
+                    <input type="text" name="email" id="email" >
+                    @
+                    <select name="domain" id="domain">
+                        <option value="naver.com">naver.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="nate.com">nate.com</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="checking">메일링 서비스 동의</label>
+                    <input type="checkbox" name="checking" id="checking">동의
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    약관동의
+                    <input type="radio" name="radiogroup" id="yes" ><label for="yes">동의</label>
+                    <input type="radio" name="radiogroup" id="no" checked><label for="no">비동의</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button>회원가입</button>
+                    <button type="reset">초기화</button>
+                    <button>취소</button>
+                </td>
+
+
+            </tr>
+        </table>
+
+    </form>
+    
+</body>
+</html>

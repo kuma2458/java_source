@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            first-child는 첫번째껄 선택하는건데
+            문제는 선택된 p태그가 부모가 있을텐데 
+            부모에게 첫째자식이어야 함
+            만약 위로 나보다 빠른 자식이 있으면 적용이 안됨
+            first-of-type은 얘중에서 첫번째 느낌
+
+            이는 last-child에도 똑같이 해당됨
+        
+        */
+        div > p:first-child{
+            color: red;
+        }
+        div > p:first-of-type{
+            text-decoration: underline;
+        }
+        div > p:last-child{
+            color: blue;
+        }
+        div > p:last-of-type{
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>제목 영역 - 1</h1>
+        <p>내용 영역 - 2</p>
+        <p>내용 영역 - 1</p>
+        <p>내용 영역 - 3</p>
+        <p>내용 영역 - 4    </p>
+        <p>내용 영역 - 5</p>
+        <h2>제목 영역 - 2</h2>
+    </div>
+    <div>
+        <p>내용 영역 - 2</p>
+        <p>내용 영역 - 1</p>
+        <p>내용 영역 - 3</p>
+        <p>내용 영역 - 4    </p>
+        <p>내용 영역 - 5</p>
+    </div>
+</body>
+</html>

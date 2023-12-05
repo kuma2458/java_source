@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            padding: 50px;
+            border: 1px solid black;
+            font-size: 24PX;
+            line-height: 24px;
+
+
+        }
+
+        .container1{
+            display: grid;
+            height: 800px;
+            /* 한줄당 3칸 최소 300px */
+            grid-template-columns: repeat(3,minmax(200px,1fr));
+            /* 한줄  최소세로길이 200px */
+            /* auto-fit을 사용하기위해선 반드시 세로나 가로길이가 지정되어야 ㅘㄴ */
+            grid-template-rows: repeat(auto-fit,minmax(200px,auto));
+            /* grid-column-gap: 10px;
+            grid-row-gap: 10px; */
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+</body>
+</html>

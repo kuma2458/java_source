@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        /* 
+            float
+            - left,right
+            -black요소를 좌우로 배치
+            -inline 요소는 float 속성을 사용할 수 없음
+            -float 속성을 사용하면 black 요소가 inline요소처럼 배치됨
+        
+        
+        */
+
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            float: Right;
+        }
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        p{
+            clear: both;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+    <div class="yellow"></div>
+    <p>내용</p>
+
+</body>
+</html>

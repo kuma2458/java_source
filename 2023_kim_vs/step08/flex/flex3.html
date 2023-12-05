@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .flex_container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .box{
+            width: 70px;
+            background-color: darkblue;
+            color: white;
+            margin-left: 10px;
+            text-align: center;
+        }
+        .flex_row{
+            display: flex;
+            flex-direction: row;
+            border: 1px solid red;
+            padding: 10px 0px;
+
+        }
+        .align1{
+            justify-content: flex-start;
+        }
+        .align2{
+            justify-content: center;
+        }
+        .align3{
+            justify-content: flex-end;
+        }
+        .align4{
+            justify-content: space-around;
+        }
+        .align5{
+            justify-content: space-between;
+        }
+        .align6{
+            justify-content: space-evenly;
+        }
+        .flex_column{
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex_container">
+        <div class="flex_row align1">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <div class="flex_row align2">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <div class="flex_row align3">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <div class="flex_row align4">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <div class="flex_row align5">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <div class="flex_row align6">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <div class="flex_row">
+            <div class="flex_column align1">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+            <div class="flex_column align2">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+            <div class="flex_column align3">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+            <div class="flex_column align4">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+            <div class="flex_column align5">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+            <div class="flex_column align6">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

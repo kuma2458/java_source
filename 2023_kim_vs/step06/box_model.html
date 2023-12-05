@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스 모델</title>
+  <style>
+    /* 
+        padding : 안쪽 내용과 border 사이의 간격
+        margin : border 바깥쪽 간격
+        width :콘텐츠 영역만 잡음
+    
+        box-sizing 옵션
+            width로 길이를 잡을때 테두리르 포함한 길이로 할지 아니면 테두리를 제외할지 결장
+    
+    */
+    div{
+        width: 300px;
+        height: 300px;
+        padding: 50px;
+        margin: 50px;
+        border: 50px solid black;
+    }
+
+    .box1{
+        box-sizing: border-box;
+    }
+
+    .box2{
+        box-sizing: content-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <hr>
+  <div class="box2"></div>
+</body>
+</html>

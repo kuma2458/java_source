@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글꼴 스타일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <style>
+        /* 
+            색상
+            rgb(0~255,0~255,0~255)
+                R G B -->2자리씩 16진수로 차지함
+            html 색상표 --> #FF00AA   
+        
+        */
+
+        .color{
+            color: #ff0000;
+        }
+        /* 
+            text-decoration : 선두깨,선위치, 선종류, 선색깔;
+            선 종류 : solid=직선, wavy =물결, dotted=점선, dashed=대시선, double=이중선
+            선 위치 : underline, line-through overline,none;
+            선두께 : px단위로 지정 -> 3px
+        
+        */
+
+        /* underline solid : 실선선 */
+        /* underline dotted : 점선 */
+        /* underline dashed : 눈금선 */
+        /* underline double : 이중선 */
+        /* underline wavy : 물결선선 */
+        /* line-through  : 취소선 */
+        /* overline : 글씨위에 선생김 */
+        a{
+            text-decoration: overline solid;
+        }
+        /* 클래스 속성값이 line에 선두깨가 3px,대시선의 밑줄로 선 색갈은 회색으로 지정 */
+
+        .line{
+            text-decoration: underline dashed gray 3px ;
+        }
+
+        /* 볼드체 : font-weight */
+        .bold{
+            font-weight: bold;
+
+        }
+
+        /* 기울임꼴 */
+        .italic{
+            font-style :  italic;
+        }
+
+        /* 폰트 변경 */
+        /* 폰트 설정: font-family : '처음폰트','처음폰트가 없을경우 두번째 폰트' */
+        .font{
+            font-family: '궁서1','바탕';
+        }
+
+        /* 폰트 파일 읽어오기 */
+        @font-face {
+            font-family: 'GowunDodum-Regular';
+            src: url('resource/GowunDodum-Regular.ttf');
+        }
+        @font-face {
+            font-family: 'MaruBuri-Regular';
+            src: url('resource/MaruBuri-Regular.ttf');
+        }
+        .new_font{
+            font-family: 'GowunDodum-Regular';
+        }
+        .new_font1{
+            font-family: 'MaruBuri-Regular';
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#" class="color">하이퍼링크</a>
+    <p class="line">근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다.</p>
+    <p class="bold">모든 국민은 <span class="italic">법률</span>이 정하는 바에 의하여 국방의 의무를 진다.</p>
+    <p class="font">대법원은 <span class="italic bold line">법률</span>에 저촉되지 아니하는 범위안에서 소송에 관한 절차, 법원의 내부규율과 사무처리에 관한 규칙을 제정할 수 있다.</p>
+    <p class="new_font">대한민국은 민주공화국이다. 대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다.</p>
+    <p class="new_font1">공무원의 직무상 불법행위로 손해를 받은 국민은 법률이 정하는 바에 의하여 국가 또는 공공단체에 정당한 배상을 청구할 수 있다. 이 경우 공무원 자신의 책임은 면제되지 아니한다.</p>
+</body>
+</html>

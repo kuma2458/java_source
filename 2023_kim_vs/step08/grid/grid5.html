@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_container{
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+            "box1 box1 box1 box1 box1"
+            "box2 box2 box2 box2 box2"
+            "box3 box3 box3 box3 box4"
+            "box5 box5 box5 box5 box5";
+            grid-template-rows: repeat(1,minmax(100px,1fr)) 50px;
+        }
+        .sub_container{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(1,minmax(200px,1fr)) auto;
+        }
+        .item{
+            border: 1px solid black;
+        }
+        .box1{
+            grid-area: box1;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 30px 20px;
+        }
+        .box1{
+            grid-area: box1;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 30px 20px;
+        }
+        .box2{
+            grid-area: box2;
+
+        }
+        .box3{
+            grid-area: box3;
+            font-size: 2em;
+            font-weight: bold;
+            line-height: 2.5em;
+        }
+        .box4{
+
+            grid-area: box4;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 30px 20px;
+        }
+        .box5{
+            display: grid;
+            grid-area: box5;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 30px ;
+        }
+        .box6{
+            grid-row: 1;
+            grid-column: auto-fit;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 30px 20px;
+        }
+        .box7{
+            font-size: 16px;
+        }
+        .box8{
+            grid-row: 1;
+            grid-column: 1/1;
+            height: 100px;
+            font-size: 16px;
+        }
+        .box9{
+            grid-row: 1;
+            grid-column: 5/7;
+            font-size: 16px;
+        }
+        ul{
+            margin: 15px;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+        li{
+            text-align: center;
+            display: inline-block;
+            width: 200px;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main_container">
+        <div class="item box1">헤더 영역</div>
+        <div class="item box2">
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+        </div>
+        <div class="item box3">섹션 제목 영역
+            <div class="sub_container">
+                <div class="item box7">
+                    <div>article 제목</div>
+                    <div>내용</div>
+                </div>
+                <div class="item box7">
+                    <div>article 제목</div>
+                    <div>내용</div>
+                </div>
+                <div class="item box7">
+                    <div>article 제목</div>
+                    <div>내용</div>
+                </div>
+                <div class="item box7">
+                    <div>article 제목</div>
+                    <div>내용</div>
+                </div>
+                <div class="item box7">
+                    <div>article 제목</div>
+                    <div>내용</div>
+                </div>
+                <div class="item box7">
+                    <div>article 제목</div>
+                    <div>내용</div>
+                </div>
+            </div>
+        </div>
+        <div class="item box4">aside 제목</div>
+        <div class="item box5">
+            <div class="item box8"></div>
+            <div class="item box9"></div>
+        </div>
+    </div>
+</body>
+</html>

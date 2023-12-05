@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* display
+            ㄴinline : 글자취급
+            ㄴinline-block : 글자취급+블록취급 
+
+            inline으로 바뀐 리스트간 간격 없애는법
+            1.엔터없이 다 붙이기
+            2.ul에 0px하고 li에다 다시 font-size px설정
+            
+            
+            */
+        li{
+            width: 200px;
+            text-align: center;
+            border: 1px solid black;
+            display: inline-block;
+            
+        }
+        ul{
+            width: 1010px;
+            margin:0 auto;
+            padding: 0px;
+            border: 1px solid black;
+            font-size: 0px;
+            list-style-type: none;
+        }
+        a{
+            width: 100%;
+            line-height: 16px;
+            font-size: 16px;
+            padding: 20px 0px;
+            display: inline-block;
+        }
+        /* 
+            visibility : hidden은 영역은 잡아먹는데 안보이는거고
+            display : none은 아예 영역도 없애버림
+
+        */
+        .img{
+            /* visibility: hidden; */
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="/css.txt">항목1</a></li>
+        <li><a href="#">항목2</a></li>
+        <li><a href="#">항목3</a></li>
+        <li><a href="#">항목4</a></li>
+        <li><a href="#">항목5</a></li>
+    </ul>
+    <hr>
+    <img src="../step06/img/milkyway.jpg" class="img">
+    <img src="../step03/img/jameswebb.jpg" >
+</body>
+</html>

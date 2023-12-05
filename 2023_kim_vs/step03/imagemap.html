@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagemap</title>
+</head>
+<body>
+    <img src="img/test123.png" usemap="#img_map">
+    <map name="img_map">
+        <!-- 사각형은 좌상단, 우하단 좌표값 잡기-->
+        <area shape="rect" coords="40,67,535,377" href="https://www.naver.com" target="_blank">
+        <!-- 원은 중심좌표,반지름 -->
+        <area shape="circle" coords="1054.5,226,138" href="https://www.daum.net" target="_blank">
+        <!-- 다각형은 좌표값1x,좌표값1y,좌표값2x,.....마지막까지 -->
+        <area shape="poly" coords="755,504,905,620,848,806,660,806,604,620" href="https://www.google.com" target="_blank" >
+    </map>
+    <hr>
+    <img src="img/img_map.png" usemap="#sns_map">
+    <map name="sns_map">
+        <area shape="rect" coords="15,20,146,49" href="https://www.youtube.com" target="_blank">
+        <area shape="circle" coords="264,102,65" href="https://www.kakaocorp.com/page/" target="_blank">
+        <area shape="rect" coords="397,34,514,59" href="https://www.facebook.com" target="_blank">
+        <area shape="circle" coords="84,150,62 " href="https://www.naver.com" target="_blank">
+        <area shape="poly" coords="409,97,501,97,504,98,511,102,516,107,519,116,519,205,517,210,514,216,508,221,501,224,409,224,403,222,397,217,393,213,391,205,391,116,394,109,398,104,402,100" href="https://twitter.com/?lang=ko" target="_blank">
+
+
+
+    </map>
+</body>
+</html>

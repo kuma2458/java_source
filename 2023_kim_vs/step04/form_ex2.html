@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그2</title>
+</head>
+<body>
+    <form action="" method="get">
+        <!-- label : 해당 label을 누르면 for에 해당하는게 선택됨 -->
+        <!-- checkbox랑 radio는 name으로 그룹화하는게 좋음 -->
+        <!-- 체크박스, 라디오 버튼
+             checked : 기본적으로 체크할수 있게 해주는 태그
+             그룹화 : name 속성값이 다르면 다른 종류의 값으로 인식
+                      라디오 버튼의 경우 예 아니오 둘다 선택될수도 있음 -->
+        <input type="checkbox" name="hobby" value="game" id="hobby1" checked> <label for="hobby1">게임</label>
+        <input type="checkbox" name="hobby" value="fishing" id="hobby2"> <label for="hobby2">낚시</label>
+        <input type="checkbox" name="hobby" value="mount" id="hobby3"><label for="hobby3">등산</label>
+        <br>
+        <label for="etc">기타 : </label>
+        <input type="text" name="etc" id="etc">
+        <br>
+        <!-- radio type은 선택버튼, name으로 같은 이름으로 묶어주면 n개중 한개 선택되도록 할 수 있음 -->
+        <input type="radio" id="agree1" name="agree" checked><label for="agree1">예</label>
+        <input type="radio" id="agree2" name="agree"><label for="agree2">아니오</label>
+        <br>
+        <!-- textarea 
+            메모칸 같은느낌?  -->
+
+        <!--  input 태그의 텍스트 상자에서 쓰던 속성을 전부 사용이 가능, 
+            cols : 컬럼 개수, row : 행 개수
+            입력창 크기 조정, 하지만 요즘은 CSS WIDTH HEIGHT로 조정 -->
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br>
+
+        <!-- 보여지는 값과 실제로 전송되는 값을 다르게 하고싶으면 value로 설정해주면 된다 -->
+        <SELect name="grade">
+            <option value="A">상</option>
+            <option value="B">중</option>
+            <option value="C">하</option>
+        </SELect>
+        <br>
+        <INPUT type="file" name=""></INPUT>
+        <br>
+    
+        <button>전송</button>
+
+    </form>
+    
+</body>
+</html>

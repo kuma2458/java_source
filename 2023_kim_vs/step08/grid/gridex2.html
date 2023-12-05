@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            padding: 20px 0px;
+        }
+        h2{
+            padding: 10px 0px 0px 0px;
+        }
+        .container{
+            width: 1300px;
+            display: grid;
+            margin: 0 auto;
+            grid-template-columns: repeat(5,1fr);
+        }
+        header{
+            text-align: center;
+            grid-row: 1;
+            grid-column: 1/6;
+            background-color: rgb(128, 128, 128);
+        }
+        nav{
+            background-color: rgb(173, 255, 47);
+            grid-row: 2;
+            grid-column: 1/6;
+        }
+        ul{
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+        }
+        li{
+            text-align: center;
+            padding: 20px 100px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        img{
+            width: 100%;
+        }
+        article{
+            grid-row: 1;
+            grid-column: 1/6;
+        }
+        .article_container{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-column-gap: 10px;
+        }
+        section{
+            grid-row: 3;
+            grid-column: 1/6;
+        }
+        footer{
+            background-color:  rgb(233, 233, 233) ;
+            grid-row: 4;
+            grid-column: 1/6;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            padding: 20px 30px;
+        }
+        .footer_p{
+            margin: 10px 0px;
+        }
+        .item{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Header</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <h2>article 제목</h2>
+                <div class="article_container">
+                    <div class="item"><img src="/step02/img/galaxy.jpg">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item"><img src="/step02/img/galaxy.jpg">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item"><img src="/step02/img/galaxy.jpg">
+                            <h3>썸네일 제목</h3>
+                            <p>썸네일 내용</p>
+                        </div>
+                    <div class="item"><img src="/step02/img/galaxy.jpg">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item"><img src="/step02/img/galaxy.jpg">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+
+                </div>
+            </article>
+            <article>
+                <h2>article 제목</h2>
+                <div class="article_container">
+                    <div class="item"><img src="/step02/img/galaxy.jpg">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item"><img src="/step02/img/galaxy.jpg">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item"><img src="/step02/img/galaxy.jpg">
+                            <h3>썸네일 제목</h3>
+                            <p>썸네일 내용</p>
+                        </div>
+                    <div class="item"><img src="/step02/img/galaxy.jpg">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item"><img src="/step02/img/galaxy.jpg">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <br>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <div class="footer_div">
+                <p class="footer_p">회사명 : ○○○○</p> 
+                <p class="footer_p">대표 : ○○○</p> 
+                <p class="footer_p">사업자번호 : ○○○-○○○○-○○○○○</p>
+                <p class="footer_p">통신판매업신고번호 : ○○○-○○○○-○○○○○</p>
+
+            </div>
+            <div class="footer_div">
+                <p class="footer_p">고객센터 연락처 : ○○-○○○○-○○○○</p>
+                <p class="footer_p">담당자 이메일 : test@gmail.com</p></div>
+
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      div{
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        margin-left: 20px;
+      }
+
+      /* 상하좌우 동일하게 넣기 */
+      .box1{
+        padding: 30px;
+      }
+      /* 상하 / 좌우 넣기 */
+      .box2{
+        padding: 20px 30px;
+      }
+      /* 상/좌우/하 넣기 */
+      .box3{
+        padding: 20px 30px 10px;
+      }
+      /* 상 우 하 좌 시계방향 순서  */
+      .box4{
+        padding: 10px 20px 30px 40px;
+      }
+      p{
+        padding: 20px;
+        border : 1px solid black;
+      }
+
+      /* inline 글자 취급되는놈들은 영역이 안잡힘
+        좌우 영역은 먹는데 상하는 안먹음
+      
+      */
+      span{
+        padding: 10px;
+        border: 1px solid black;
+
+      }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>    
+    <hr>
+    <div class="box2"></div>    
+    <hr>
+    <div class="box3"></div>    
+    <hr>
+    <div class="box4"></div>    
+    <hr>
+    <p>block <span>태그</span> 영역<br>
+        텍스트 내용 처리부분</p>
+</body>
+</html>
