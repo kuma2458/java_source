@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,13 @@
             padding: 0;
         }
         .search_bar{
+            margin: 0 auto;
             width: 1000px;
             height: 64px;
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
-            align-items: center;
+            align-content: center;
             box-sizing: border-box;
             position: absolute;
             top: 100px;
@@ -23,21 +24,25 @@
         }
         select{
             width: 90px;
-            height: 65px;
+            height: 64px;
             font-size: 20px;
             padding-left: 5px;
+            border: 1px solid black;
         }
         #search_bar{
             width: 100%;
-            height: 64px;
+            height: 100%;
             border: none;
             font-size: 20px;
+            margin-bottom: 2px;
+            box-sizing: border-box;
         }
 
         button{
             border: none;
-            height: 65px;
-            background-color: white;
+            height: 64px;
+            background: none;
+            outline: none;
             padding: 0px 30px;
             font-size: 20px;
 
@@ -54,10 +59,12 @@
         }
         .input_bar{
             width: 500px;
+            height: 64px;
             display: flex;
             flex-flow: row nowrap;
             border: 1px solid black;
             box-sizing: border-box;
+            align-content: center;
 
 
         }
@@ -88,9 +95,9 @@
         </select>
         <div class="input_bar">
             <span class="icon_zoom"></span>
-            <input type="text" name="search_bar" id="search_bar" checked>
+            <input type="text" name="search_bar" id="search_bar">
         </div>
-        <button>검색</button>
+        <button type="submit">검색</button>
     </div>
 </body>
 </html>
